@@ -33,8 +33,8 @@ def get_user():
     ]
     result_data = subprocess.run(cmd, capture_output=True, text=True)
     
+    print(result_data)
     output = result_data.stdout+result_data.stderr
-    print(output)
     lines = output.splitlines()
     print("lines : ",lines)
     results_saved_info = ''+lines[-1].split(" ",4)[-1].split("\\",3)[-1].strip()
