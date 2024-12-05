@@ -25,7 +25,7 @@ def get_user():
     
     img = "fresh_banana.jpg"
     cmd = [
-        sys.executable, 'detect.py',
+        "python", 'detect.py',
         '--weights', './best_veg.pt',
         '--img', '640',
         '--conf', '0.1',
@@ -33,7 +33,8 @@ def get_user():
     ]
     result_data = subprocess.run(cmd, capture_output=True, text=True)
     
-    output = result_data.stderr
+    output = result_data.stdout+result_data.stderr
+    print(output)
     lines = output.splitlines()
     print("lines : ",lines)
     results_saved_info = ''+lines[-1].split(" ",4)[-1].split("\\",3)[-1].strip()
