@@ -35,6 +35,7 @@ def get_user():
     
     output = result_data.stderr
     lines = output.splitlines()
+    print("lines : ",lines)
     results_saved_info = ''+lines[-1].split(" ",4)[-1].split("\\",3)[-1].strip()
     
     parts = lines[-3].split(":", 2)

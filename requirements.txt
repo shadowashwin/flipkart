@@ -18,3 +18,10 @@ ultralytics>=8.2.34
 pandas>=1.1.4
 seaborn>=0.11.0
 dill==0.3.9
+
+
+# Flask
+# matplotlib
+# torch
+# gunicorn
+# ultralytics
